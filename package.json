@@ -1,0 +1,20 @@
+{
+  "name": "ambiente-docker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js",
+    "docker-compose-down": "docker-compose -f './docker-compose.yml' down",
+    "docker-compose-up": "docker-compose -f './docker-compose.yml' up -d --build app",
+    "docker:dev" : "npm run docker-compose-down; npm run docker-compose-up; docker-compose logs -f app"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.2",
+    "nodemon": "^2.0.15"
+  }
+}
