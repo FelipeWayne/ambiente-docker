@@ -8,13 +8,14 @@
     "start": "nodemon index.js",
     "docker-compose-down": "docker-compose -f './docker-compose.yml' down",
     "docker-compose-up": "docker-compose -f './docker-compose.yml' up -d --build app",
-    "docker:dev" : "npm run docker-compose-down; npm run docker-compose-up; docker-compose logs -f app"
+    "docker:dev": "npm run docker-compose-down; npm run docker-compose-up; docker-compose logs -f app"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.2",
+    "newrelic": "^8.7.1",
     "nodemon": "^2.0.15"
   }
 }
